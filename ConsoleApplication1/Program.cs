@@ -13,6 +13,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            GitHubService.GetApexBranches();
+
             // Print all Debug.WriteLine calls to the console to make it
             // easier to determine the cause of any errors.
             Debug.Listeners.Add(new ConsoleTraceListener());
