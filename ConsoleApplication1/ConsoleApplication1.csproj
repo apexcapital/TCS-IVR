@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GitHubService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +53,10 @@
     <ProjectReference Include="..\..\BuildABot\BuildABot.UC\BuildABot.UC.csproj">
       <Project>{29b4746c-3720-47dd-8244-67585e18a1e6}</Project>
       <Name>BuildABot.UC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{7c536e61-bb88-4644-9a67-16501ab191af}</Project>
+      <Name>ClassLibrary1</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

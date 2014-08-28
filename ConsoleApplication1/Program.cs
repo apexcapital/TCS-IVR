@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BuildABot.UC;
 using System.Configuration;
 using System.Diagnostics;
+using ClassLibrary1;
 
 namespace ConsoleApplication1
 {
@@ -13,7 +14,9 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            GitHubService.GetApexBranches();
+            GitHubService service = new GitHubService("1234567890", "1234");
+            service.getBalance();
+            
 
             // Print all Debug.WriteLine calls to the console to make it
             // easier to determine the cause of any errors.
@@ -21,7 +24,11 @@ namespace ConsoleApplication1
 
             String applicationUserAgent = ConfigurationManager.AppSettings["applicationuseragent"];
             String applicationurn = ConfigurationManager.AppSettings["applicationurn"];
-            UCBotHost ucBotHost = new UCBotHost(applicationUserAgent, applicationurn);
+
+            String helpMessage = "Sorry, I don't understand gibberish, loser!";
+           
+
+            UCBotHost ucBotHost = new UCBotHost(applicationUserAgent, applicationurn,helpMessage);
             ucBotHost.Run();
         }
     }
