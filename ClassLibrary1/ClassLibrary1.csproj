@@ -31,6 +31,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,8 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="HelpMessageHandler.cs" />
+    <Compile Include="TimeMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Program Files\Microsoft UCMA 4.0\SDK\Core\Sample Applications\Reference\BuildABot\BuildABot.Core\BuildABot.Core.csproj">
+      <Project>{f404bc29-6fab-4d22-a24c-135a40b356d4}</Project>
+      <Name>BuildABot.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\Program Files\Microsoft UCMA 4.0\SDK\Core\Sample Applications\Reference\BuildABot\BuildABot.UC\BuildABot.UC.csproj">
+      <Project>{29b4746c-3720-47dd-8244-67585e18a1e6}</Project>
+      <Name>BuildABot.UC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\Program Files\Microsoft UCMA 4.0\SDK\Core\Sample Applications\Reference\BuildABot\BuildABot.Util\BuildABot.Util.csproj">
+      <Project>{9fadd15b-5bda-4e63-adb8-da9be3cb9573}</Project>
+      <Name>BuildABot.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
